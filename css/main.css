@@ -961,6 +961,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	letter-spacing: .2rem;
 	font-size: 1.5rem;
 	line-height: 2.4rem;
+	text-transform: unset;
+}
 }
 .skill-bars li .progress {
 	background: #313131;
@@ -1327,7 +1329,7 @@ header .logo a {
 .intro-content h1 {
 	color: #FFFFFF;
 	font-family: "poppins-medium", sans-serif;
-	font-size: 8.4rem;
+	font-size: 7.0rem !important;
 	line-height: 1.071;
 	max-width: 900px;
 	margin-top: 0;
@@ -1492,7 +1494,7 @@ header .logo a {
 #about {
 	background: #FFFFFF;
 	padding-top: 12rem;
-	padding-bottom: 15rem;
+	padding-bottom:1rem;
 }
 #about .section-intro {
 	margin-bottom: 3rem;
@@ -1543,6 +1545,7 @@ header .logo a {
 	letter-spacing: .2rem;
 	font-size: 1.5rem;
 	line-height: 3rem;
+	text-transform: unset;
 }
 .about-content .info-list li span {
 	display: block;
@@ -2598,3 +2601,22 @@ footer .copyright span:last-child::after {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
