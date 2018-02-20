@@ -4,8 +4,6 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 
-
-
    <meta charset="utf-8">
     <title>Anand Kumar Jaiswal</title>
     <meta name="keywords" content="FRD, FRSD, BRD, Use Case, Test Cases, Testing, Manual testing, Functional Testing, Microsoft Word, Microsoft Excel, Bug Tracker, Doc Maintanencce, HTML5, Anand, Jaiswal, Anand Kumar Jaiswal, Anand Jaiswal, CSS3">
@@ -27,7 +25,7 @@
    <link rel="stylesheet" href="css/vendor.css">    
    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'> 
    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-
+   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
    <!-- script
    ================================================== -->   
 	<script src="js/modernizr.js"></script>
@@ -35,7 +33,15 @@
 
    <!-- favicons
 	================================================== -->
-	<link rel="icon" type="image/png" href="favicon.png">
+	<!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#00a300">
+	<meta name="msapplication-TileImage" content="mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 
 </head>
 
@@ -43,14 +49,14 @@
 
 	<!-- header 
    ================================================== -->
-   <header>   	
+  <!--  <header>   	
    	<div class="row">
 
    		<div class="top-bar">
    			<a class="menu-toggle" href="#"><span>Menu</span></a>
 
 	   		<div class="logo">
-		         <a href="index.html">Anand Kumar Jaiswal</a>
+		         <a href="index.html" style="">Anand Kumar Jaiswal</a>
 		      </div>		      
 
 		   	<nav id="main-nav-wrap">
@@ -64,10 +70,299 @@
 						<li><a href="styles.html" title="">Style Demo</a></li>				
 					</ul>
 				</nav>    		
-   		</div> <!-- /top-bar --> 
+   		</div> 
    		
-   	</div> <!-- /row --> 		
-   </header> <!-- /header -->
+   	</div> 		
+   </header>  -->
+   <style type="text/css">
+   	/* ===================================================================
+ * # header styles - (_site-layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+
+.s-header {
+    width: 100%;
+    height: 72px;
+    background-color: #060606;
+    position: absolute;
+    top: 0;
+    z-index: 500;
+}
+
+.s-header.offset {
+    -webkit-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.s-header.scrolling {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.s-header.sticky {
+    position: fixed;
+    top: 0;
+    background-color: #000000 !important;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 600;
+}
+
+.s-header.sticky .header-logo a {
+    margin: 0;
+}
+
+.s-header.sticky .header-nav-wrap {
+    top: 0;
+}
+
+.s-header.sticky.scrolling {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* -------------------------------------------------------------------
+ * ## header logo - (_site-layout.css) 
+ * ------------------------------------------------------------------- */
+
+.header-logo {
+    display: inline-block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 50px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 501;
+}
+
+.header-logo a {
+    display: block;
+    margin: 9px 0 0 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    width: 80px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* ------------------------------------------------------------------- 
+ * ## mobile menu toggle - (_site-layout.css) 
+ * ------------------------------------------------------------------- */
+
+.header-menu-toggle {
+    display: none;
+    position: absolute;
+    right: 29px;
+    top: 18px;
+    height: 42px;
+    width: 42px;
+    line-height: 42px;
+    font-family: "poppins-medium", sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 0.3s ease-in-out;
+    /transition: all 0.3s ease-in-out;
+
+}
+
+.header-menu-toggle:hover, .header-menu-toggle:focus {
+    color: #FFFFFF;
+}
+
+.header-menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin-top: -1px;
+    position: absolute;
+    left: 9px;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    background-color: white;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
+.header-menu-toggle span::before, 
+.header-menu-toggle span::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    left: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.header-menu-toggle span::before {
+    top: -9px;
+}
+
+.header-menu-toggle span::after {
+    bottom: -9px;
+}
+
+.s-header.sticky .header-menu-toggle {
+    top: 12px;
+}
+
+.header-menu-toggle.is-clicked span {
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.header-menu-toggle.is-clicked span::before, 
+.header-menu-toggle.is-clicked span::after {
+    background-color: white;
+}
+
+.header-menu-toggle.is-clicked span::before {
+    top: 0;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.header-menu-toggle.is-clicked span::after {
+    bottom: 0;
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+
+/* ------------------------------------------------------------------- 
+ * ## navigation - (_site-layout.scss) 
+ * ------------------------------------------------------------------- */
+
+.header-nav-wrap {
+    font-family: "poppins-medium", sans-serif;
+    display: block;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .20 rem !important;
+    position: absolute;
+    top: 9px;
+    right: 50px;
+    font-weight: 700;
+}
+.header-nav {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    height: 72px;
+}
+
+.header-nav li {
+    display: inline-block;
+    padding-left: 0;
+    margin-right: 2rem;
+}
+
+.header-nav li a {
+    display: block;
+    line-height: 72px;
+    color: #FFFFFF;
+}
+
+.header-nav li.current a {
+    font-family: "montserrat-extrabold", sans-serif;
+    color: #FF0077;
+}
+
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * header
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 800px) {
+    .header-logo {
+        left: 40px;
+    }
+    .header-nav-wrap {
+        display: none;
+        height: auto;
+        width: 100%;
+        right: auto;
+        top: 0;
+        left: 0;
+        background-color: #000000;
+        padding: 120px 40px 21px;
+    }
+    .header-nav-wrap .header-nav {
+        display: block;
+        height: auto;
+        margin: 0 0 4.2rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .header-nav-wrap .header-nav li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.07);
+    }
+    .header-nav-wrap .header-nav li a {
+        padding: 18px 0;
+        line-height: 18px;
+    }
+    .header-menu-toggle {
+        display: block;
+    }
+}
+
+
+/* -------------------------------------------------------------------
+ * make sure the menu is visible on larger screens
+ * ------------------------------------------------------------------- */
+
+@media only screen and (min-width: 801px) {
+    .header-nav-wrap {
+        display: block !important;
+    }
+}
+   </style>
+   <header class="s-header sticky offset scrolling">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html"><img src="images/sunroof.png" alt="Homepage" style="max-width: 177px;
+height: 60px;"></a>
+        </div>
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li class=""><a class="smoothscroll" href="#home" title="home">Home</a></li>
+                <li class=""><a class="smoothscroll" href="#about" title="about">About Me</a></li>
+                <li class="current"><a class="smoothscroll" href="#profile" title="about">Profile</a></li>
+                <li><a class="smoothscroll" href="#works" title="resume">Work Experience</a></li>
+                 <li><a class="smoothscroll" href="#row section-intro" title="education">Education</a></li>
+                <li><a class="smoothscroll" href="#blog" title="blog">Skills</a></li>
+                 <li><a class="smoothscroll" href="#hobbies" title="works">Hobbies</a></li>
+                <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header>
 
 	<!-- intro section
    ================================================== -->
@@ -81,7 +376,7 @@
    			<div class="col-twelve">
 
 	   			<h5>Hello, World.</h5>
-	   			<h1>I'm Anand Kumar Jaiswal.</h1> 
+	   			<h1 style="font-size: 70px;">I'm Anand Kumar Jaiswal.</h1> 
 
 	   			<p class="intro-position">
 	   				<span>Business Analyst</span>
@@ -127,7 +422,8 @@
    		</div>   		
    	</div>
    	</section> <!-- /section-intro -->
-   	<section id="about">
+
+   	<section id="about" style="background: #ebebeb;">
    		<div class="row section-intro">
    			<div class="col-twelve">
 	   			<h5>My Profile</h5>
@@ -135,34 +431,43 @@
 			</div>   		
    		</div>
 
-   	<div class="row about-content">
+   	<div class="row about-content" style="width: 94%; max-width: 1200px; margin: 0 auto;">
 
    		<div class="col-six tab-full">
 
-   			<h3>Profile Details</h3>
-   			<p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p>
+   			<h3 style="font-size: 2.4rem;font-style: normal; line-height: 1.25; text-rendering: optimizeLegibility; font-weight: normal; color: #862121; font-family: "montserrat-medium", sans-serif;">Profile Details</h3>
+   			<!-- <p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p> -->
 
    			<ul class="info-list">
    				<li>
-   					<strong>Full Name:</strong>
+   					<strong><i class="fas fa-male"></i> Full Name:</strong>
    					<span>Anand Kumar Jaiswal</span>
    				</li>
    				<li>
-   					<strong>Birth Date:</strong>
+   					<strong><i class="fas fa-birthday-cake"></i> Birth Date:</strong>
    					<span>March 16 <sup>th</sup>, 1993</span>
    				</li>
    				<li>
-   					<strong>Job:</strong>
+   					<strong><i class="fas fa-handshake"></i> Job:</strong>
    					<span>Business Analyst</span>
             		<span>Manual Tester</span>
    				</li>
-   				<!-- <li>
-   					<strong>Website:</strong>
-   					<span>IN-Progress</span>
-   				</li> -->
    				<li>
-   					<strong>Email:</strong>
-   					<span>me@kardswebsite.com</span>
+   					<strong><i class="fab fa-whatsapp-square"></i> WhatsApp No.:</strong>
+   					<span>+91- 8588024407</span>
+   				</li>
+   				<li>
+   					<strong><i class="fas fa-mobile"></i> Contact No.:</strong>
+   					<span>+91- 987057020707</span>
+   				</li>
+   				<li>
+   					<strong><i class="fas fa-envelope-square"></i> Email:</strong>
+   					<span>anandkumarj16@gmail.com</span>
+   					<span>anand@msysbsol.com</span>
+   				</li>
+   				<li>
+   					<strong><i class="fab fa-skype"></i> Skype:</strong>
+   					<span>veer-prashant</span>
    				</li>
 
    			</ul> <!-- /info-list -->
@@ -171,8 +476,8 @@
 
    		<div class="col-six tab-full">
 
-   			<h3>Skills</h3>
-   			<p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p>
+   			<h3 style="font-size: 2.4rem;font-style: normal; line-height: 1.25; text-rendering: optimizeLegibility; font-weight: normal; color: #862121; font-family: "montserrat-medium", sans-serif;">Skills</h3>
+   			<!-- <p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p> -->
 
 				<ul class="skill-bars">
 				   <li>
@@ -185,44 +490,34 @@
 				   </li>
 				   <li>
 				   	<div class="progress percent70"><span>70%</span></div>
-				   	<strong>Manual Testion</strong>
+				   	<strong>Manual Fucntional Testing</strong>
 				   </li>
 				   <li>
 				   	<div class="progress percent95"><span>95%</span></div>
 				   	<strong>FRD (Functional Requirement Document)</strong>
 				   </li>
-				   <li>
+				   
 				   	<li>
 				   	<div class="progress percent95"><span>50%</span></div>
 				   	<strong>HTML5 (Hyper Text Markup Language)</strong>
 				   </li>
-				   <li>
 				   	<li>
 				   	<div class="progress percent95"><span>30%</span></div>
 				   	<strong>CSS3 (Cascading Style Sheet)</strong>
 				   </li>
 				   <li>
-				   	<div class="progress percent75"><span>75%</span></div>
-				   	<strong>Wordpress</strong>
+				   	<div class="progress percent75"><span>95%</span></div>
+				   	<strong>Microsoft Word</strong>
 				   </li>
       			</ul> <!-- /skill-bars -->		
 		</div>
    	</div>
    </sectiion>
-	<section id="about">
-   	<div class="row button-section">
-   		<div class="col-twelve">
-   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Contact Me</a>
-   			<a href="#" title="Download CV" class="button button-primary">Download CV</a>
-   		</div>   		
-   	</div>
-
-   </section> <!-- /process-->    
-
+	
 
    <!-- resume Section
    ================================================== -->
-	<section id="resume" class="grey-section">
+	<section id="resume" class="grey-section" style="background: white;">
 
 		<!-- <div class="row section-intro">
    		<div class="col-twelve">
@@ -286,7 +581,7 @@
 
 	   				<div class="timeline-header">
 	   					<h3>Business Analyst</h3>
-	   					<p>November, 2014 — March, 2017</p>
+	   					<p>Nov, 2014 — March, 2017</p>
 	   				</div>
 
 	   				<div class="timeline-content">
@@ -334,6 +629,18 @@
    	</section>
 
 
+   	<section id="about" style="background: #ebebeb; padding-top: 1rem; padding-bottom: 0rem;">
+   	<div class="row button-section">
+   		<div class="col-twelve">
+   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Contact Me</a>
+   			<a href="#" title="Download CV" class="button button-primary">Download CV</a>
+   		</div>   		
+   	</div>
+
+   </section> <!-- /process-->    
+
+
+
    	<section id="resume" class="grey-section" style="background-color: white">
    	<div class="row resume-timeline">
 
@@ -356,8 +663,8 @@
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>Bachelor Degree</h3>
-	   					<p>July 2010 — Jun 2014</p>
+	   					<h3><i class="fas fa-graduation-cap"></i> Bachelor Degree</h3>
+	   					<p>July 2010 — June 2014</p>
 	   				</div>
 
 	   				<div class="timeline-content">
@@ -381,12 +688,12 @@
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3 style="margin-left: -19px;">10+2 (Higher Secondary)</h3>
+	   					<h3 style="margin-left: -19px;"><img src="sch.png" style="width: 25px; height: 23px; vertical-align: top;"> 10+2 (Higher Secondary)</h3>
 	   					<p>April 2008 - May 2009</p>
 	   				</div>
 
 	   				<div class="timeline-content">
-	   					<h4>Government Multipurpose Higher Secondary School, Ambikapur, CG, 497001, <strong>India</strong></h4>
+	   					<h4>Government Multipurpose Higher Secondary School,<br>Ambikapur, CG, 497001, <strong>India</strong></h4>
 	   					<p>
 	   						<strong style="color: black;"><img src="cbse.gif" style="width: 20px; height: 23px; vertical-align: text-bottom;"> Board : </strong>CBSE (Central Board of Secondary Education) <br>
                 <strong style="color: black;"><img src="sci.png" style="width: 15px; height: 18px; vertical-align: text-top;"> Stream : </strong>Math (PCM) <br>
@@ -405,12 +712,12 @@
 	   				</div>
 
 	   				<div class="timeline-header">
-	   					<h3>10<sup>th</sup> (High School)</h3>
+	   					<h3><img src="sch.png" style="width: 25px; height: 23px; vertical-align: top;"> 10<sup>th</sup> (High School)</h3>
 	   					<p>April 2006 - May 2007</p>
 	   				</div>
 
 	   				<div class="timeline-content">
-	   					<h4>Government Multipurpose Higher Secondary School, Ambikapur, CG, 497001, <strong>India</strong></h4>
+	   					<h4>Government Multipurpose Higher Secondary School,<br>Ambikapur, CG, 497001, <strong>India</strong></h4>
 	   					<p>
 	   						<strong style="color: black;"> <img src="cbse.gif" style="width: 20px; height: 23px; vertical-align: text-bottom;"> Board : </strong>CBSE (Central Board of Secondary Education) <br>
                   			<strong style="color: black;"><i class="fas fa-book" style="font-size: 18px;vertical-align: text-top;"></i> Subject : </strong>Genral Subjects <br>
@@ -431,7 +738,7 @@
 
 	<!-- Portfolio Section
    ================================================== -->
-	<section id="portfolio">
+	<section id="portfolio" style="background: #ebebeb;">
 
 		<div class="row section-intro">
    		<div class="col-twelve">
@@ -1010,7 +1317,7 @@
    				<i class="icon-pin"></i>
    			</div>
 
-   			<h5 style="font-family: sofia">Where to find me</h5>
+   			<h5 style="font-family: sofia; text-transform: CAPITALIZE;">Where to find me</h5>
 
    			<p>
             1600 Amphitheatre Parkway<br>
@@ -1026,7 +1333,7 @@
    				<i class="icon-mail"></i>
    			</div>
 
-   			<h5 style="font-family: sofia">Email Me At</h5>
+   			<h5 style="font-family: sofia; text-transform: CAPITALIZE;">Email Me At</h5>
 
    			<p>anandkumarj16@gmail.com<br>
 			   	anand@msysbsol.com			     
@@ -1040,7 +1347,7 @@
    				<i class="icon-phone"></i>
    			</div>
 
-   			<h5 style="font-family: sofia">Call Me At</h5>
+   			<h5 style="font-family: sofia; text-transform: CAPITALIZE;">Call Me At</h5>
 
    			<p>Phone: (+63) 555 1212<br>
 			   	Mobile: (+63) 555 0100<br>
