@@ -45,7 +45,10 @@
 	/* Owl Carousel
 	------------------------------------------------------ */ 
 	$("#owl-slider").owlCarousel({
-        navigation: false,
+	    loop:true, autoPlay:true,autoplaySpeed:500,
+        autoplayTimeout: 500,        
+        autoplayHoverPause:true,
+        navigation: true,
         pagination: true,
         itemsCustom : [
 	        [0, 1],
@@ -190,20 +193,17 @@
 	/*---------------------------------------------------- */
   	/* Smooth Scrolling
   	------------------------------------------------------ */
-  	$('.smoothscroll').on('click', function (e) {
-	 	
+  	$('.smoothscroll').on('click', function (e) {	 	
 	 	e.preventDefault();
-
-   	var target = this.hash,
+    	var target = this.hash,
     	$target = $(target);
-
     	$('html, body').stop().animate({
        	'scrollTop': $target.offset().top
       }, 800, 'swing', function () {
       	window.location.hash = target;
       });
 
-  	});  
+  	});
   
 
    /*---------------------------------------------------- */
