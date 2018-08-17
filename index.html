@@ -284,7 +284,7 @@
 }
 
 .header-nav li.current a {
-    font-family: "montserrat-extrabold", sans-serif;
+    /*font-family: "montserrat-extrabold", sans-serif;*/
     color: #FF0077;
 }
 
@@ -333,12 +333,105 @@
 /* -------------------------------------------------------------------
  * make sure the menu is visible on larger screens
  * ------------------------------------------------------------------- */
+.skill-bars li strong {
+    position: absolute;
+    left: 0;
+    top: -3rem;
+    font-family: "poppins-bold", sans-serif;
+    letter-spacing: 0rem;
+    position: absolute;
+    left: 0;
+    top: -3rem;
+    color: #0D0A0B;
+    text-transform: capitalize;
+    letter-spacing: 0rem;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+}
+.skill-bars li .progress span {
+    position: absolute;
+    right: 0;
+    top: auto;
+    display: block;
+    font-family: "poppins-regular", sans-serif;
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1;
+    background: #313131;
+    padding: .6rem .6rem;
+    border-radius: 3px;
+    bottom: -3rem;
+}
+.skill-bars li .progress span::after {
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 5px solid #31313100;
+    border-bottom: 5px solid #313131;
+    content: "";
+    bottom: auto;
+    top: -1rem;
+}
 
 @media only screen and (min-width: 801px) {
     .header-nav-wrap {
         display: block !important;
     }
 }
+@media only screen and (max-width: 769px) {
+     .skill-bars li strong {
+         position: absolute;
+    left: 0;
+    font-family: "poppins-bold", sans-serif;
+    color: #313131;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-transform: unset;
+    bottom: 8px;
+    top: auto;
+    letter-spacing: 0px
+    }
+    .skill-bars li {
+    margin-bottom: 7rem;
+}
+}
+
+
+.skill-bars li .percent90 {
+    width: 90%;
+}
+.skill-bars li .progress {
+    background: #000000;
+    background-image: linear-gradient(to right, #191A3F, #2d462c);
+    position: relative;
+    height: 100%;
+}
+.skill-bars li .percent85 {
+    width: 85%;
+}
+.skill-bars li .percent70 {
+    width: 70%;
+}
+.skill-bars li .percent95 {
+    width: 95%;
+}
+.skill-bars li .percent75 {
+    width: 95%;
+}
+.skill-bars li .percent90 {
+    width: 90%;
+}
+.skill-bars li .percent50{
+    width: 50%;
+}
+.skill-bars li .percent30{
+    width: 30%;
+}
+
+
    </style>
    <header class="s-header sticky offset scrolling">
 
@@ -347,15 +440,16 @@
 height: 60px;"></a>
         </div>
 
-        <nav class="header-nav-wrap">
+        <nav id="main-nav-wrap" class="header-nav-wrap">
             <ul class="header-nav">
-                <li class=""><a class="smoothscroll" href="#home" title="home">Home</a></li>
-                <li class=""><a class="smoothscroll" href="#about" title="about">About Me</a></li>
-                <li class="current"><a class="smoothscroll" href="#profile" title="about">Profile</a></li>
-                <li><a class="smoothscroll" href="#works" title="resume">Work Experience</a></li>
-                 <li><a class="smoothscroll" href="#row section-intro" title="education">Education</a></li>
-                <li><a class="smoothscroll" href="#blog" title="blog">Skills</a></li>
-                 <li><a class="smoothscroll" href="#hobbies" title="works">Hobbies</a></li>
+                <li class="current"><a class="smoothscroll" href="#intro" title="home">Home</a></li>
+                <li ><a class="smoothscroll" href="#about" title="about">About Me</a></li>
+                <li><a class="smoothscroll" href="#profile" title="about">Profile</a></li>
+                <li><a class="smoothscroll" href="#resume" title="resume">Work Experience</a></li>
+                 <li><a class="smoothscroll" href="#resume1" title="education">Education</a></li>
+                <li><a class="smoothscroll" href="#portfolio" title="blog">Portfolio</a></li>
+                <li><a class="smoothscroll" href="#services" title="blog">Services</a></li>
+                 <li><a class="smoothscroll" href="#stats" title="works">Hobbies</a></li>
                 <li><a class="smoothscroll" href="#contact" title="contact">Contact</a></li>
             </ul>
         </nav>
@@ -379,11 +473,11 @@ height: 60px;"></a>
 	   			<h1 style="font-size: 70px;">I'm Anand Kumar Jaiswal.</h1> 
 
 	   			<p class="intro-position">
-	   				<span>Business Analyst</span>
-	   				<span>Manual Tester</span> 
+	   				<span>Sr. Business Analyst</span> <br>
+	   				<span style="margin-top: 5px;"> Manual Tester</span> 
 	   			</p>
 
-	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+	   			<!-- <a class="button stroke smoothscroll" href="#about" title="">More About Me</a> -->
 
 	   		</div>  
    			
@@ -391,7 +485,7 @@ height: 60px;"></a>
    	</div> <!-- /intro-content --> 
 
    	<ul class="intro-social">        
-         <li><a href="www.linkedin.com/in/anandkumarjaiswal" target="_blank"><i class="fab fa-linkedin-in" style="font-size: 25px; vertical-align: baseline;"></i></a></li>
+         <li><a href="https://www.linkedin.com/in/anandkumarjaiswal" target="_blank"><i class="fab fa-linkedin-in" style="font-size: 25px; vertical-align: baseline;"></i></a></li>
          <li><a href="https://www.facebook.com/anandkujaiswal" target="_blank"><i class="fab fa-facebook-f" style="font-size: 25px; vertical-align: baseline;"></i></a></li>
          <li><a href="https://twitter.com/anandjaiswal03" target="_blank"><i class="fab fa-twitter" style="font-size: 25px; vertical-align: baseline;"></i></a></li>
          <li><a href="https://www.instagram.com/jaiswal.anand16/" target="_blank"><i class="fab fa-instagram" style="font-size: 25px; vertical-align: baseline;"></i></i></a></li>
@@ -403,12 +497,12 @@ height: 60px;"></a>
 
    <!-- about section
    ================================================== -->
-   <section id="about">  
+   <section id="about" style="    padding: 35px 0px 1px;">  
 
    	<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>About</h5>
+   			<h5 style="font-size: 2.4rem; text-transform: capitalize; ">About</h5>
    			<h1 style="font-family: sofia">Let me introduce myself.</h1>
 
    			<div class="intro-info">
@@ -423,10 +517,10 @@ height: 60px;"></a>
    	</div>
    	</section> <!-- /section-intro -->
 
-   	<section id="about" style="background: #ebebeb;">
+   	<section id="profile" style="background: #ebebeb;     padding: 35px 0px 1px;">
    		<div class="row section-intro">
    			<div class="col-twelve">
-	   			<h5>My Profile</h5>
+	   			<h5 style="font-size: 2.4rem; text-transform: capitalize;">My Profile</h5>
    				<h1 style="font-family: sofia">My personal Details and Skills.</h1>
 			</div>   		
    		</div>
@@ -450,7 +544,7 @@ height: 60px;"></a>
    				<li>
    					<strong><i class="fas fa-handshake"></i> Job:</strong>
    					<span>Business Analyst</span>
-            		<span>Manual Tester</span>
+            		<span style="padding-top: 5px;">Manual Tester</span>
    				</li>
    				<li>
    					<strong><i class="fab fa-whatsapp-square"></i> WhatsApp No.:</strong>
@@ -463,7 +557,7 @@ height: 60px;"></a>
    				<li>
    					<strong><i class="fas fa-envelope-square"></i> Email:</strong>
    					<span>anandkumarj16@gmail.com</span>
-   					<span>anand@msysbsol.com</span>
+   					<span style="padding-top: 5px;">anand@msysbsol.com</span>
    				</li>
    				<li>
    					<strong><i class="fab fa-skype"></i> Skype:</strong>
@@ -498,11 +592,11 @@ height: 60px;"></a>
 				   </li>
 				   
 				   	<li>
-				   	<div class="progress percent95"><span>50%</span></div>
+				   	<div class="progress percent50"><span>50%</span></div>
 				   	<strong>HTML5 (Hyper Text Markup Language)</strong>
 				   </li>
 				   	<li>
-				   	<div class="progress percent95"><span>30%</span></div>
+				   	<div class="progress percent30"><span>30%</span></div>
 				   	<strong>CSS3 (Cascading Style Sheet)</strong>
 				   </li>
 				   <li>
@@ -517,7 +611,7 @@ height: 60px;"></a>
 
    <!-- resume Section
    ================================================== -->
-	<section id="resume" class="grey-section" style="background: white;">
+	<section id="resume" class="grey-section" style="background: white;     padding: 35px 0px 1px;">
 
 		<!-- <div class="row section-intro">
    		<div class="col-twelve">
@@ -534,7 +628,7 @@ height: 60px;"></a>
 
    		<div class="col-twelve resume-header">
 
-   			<h2>Work Experience</h2>
+   			<h2 style="text-transform: capitalize;">Work Experience</h2>
    			<h1 style="font-family: sofia">My Work Experience, Role & Responsibilities In The Organisation.</h1>
    			<p class="lead">I have more than 3+ years of experience in the field of Business Analyst.<br> 
         Below are my Experience details.</p>
@@ -629,7 +723,7 @@ height: 60px;"></a>
    	</section>
 
 
-   	<section id="about" style="background: #ebebeb; padding-top: 1rem; padding-bottom: 0rem;">
+   	<section id="about" style="background: #ebebeb; padding-top: 4rem; padding-bottom: 3.2rem;">
    	<div class="row button-section">
    		<div class="col-twelve">
    			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Contact Me</a>
@@ -641,12 +735,12 @@ height: 60px;"></a>
 
 
 
-   	<section id="resume" class="grey-section" style="background-color: white">
-   	<div class="row resume-timeline">
+   	<section id="resume1" class="grey-section" style="background-color: white; ">
+   	<div class="row resume-timeline"  id="resume" style="padding: 35px 0px 2px;">
 
    		<div class="col-twelve resume-header">
 
-   			<h2>Education</h2>
+   			<h2 style="text-transform: capitalize;">Education</h2>
    			<h1 style="font-family: sofia">My Academic Qualifications.</h1>
 
    		</div> <!-- /resume-header -->
@@ -738,12 +832,12 @@ height: 60px;"></a>
 
 	<!-- Portfolio Section
    ================================================== -->
-	<section id="portfolio" style="background: #ebebeb;">
+	<section id="portfolio" style="background: #ebebeb; padding: 35px 0px 3px;">
 
 		<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>Portfolio</h5>
+   			<h5 style="font-size: 2.4rem; text-transform: capitalize;">Portfolio</h5>
    			<h1 style="font-family: sofia">Check Out Some of My Latest Projects & Their Brief Descriptions.</h1>
 
    			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
@@ -1018,14 +1112,14 @@ height: 60px;"></a>
 	
 	<!-- services Section
    ================================================== -->
-	<section id="services">
+	<section id="services" style="padding: 35px 0px 3px;">
 
 		<div class="overlay"></div>
 
 		<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>Services</h5>
+   			<h5 style="font-size: 2.4rem; text-transform: capitalize;">Services</h5>
    			<h1 style="font-family: sofia">What Can I Do For You & Your Organisation?</h1>
 
    			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
@@ -1136,8 +1230,18 @@ height: 60px;"></a>
 
 	<!-- stats Section
    ================================================== -->
-	<section id="stats" class="count-up">
+	<section id="stats" class="count-up" style="    padding-top: 3.2rem;
+    padding-bottom: 4rem;">
+  <div class="row section-intro">
+      <div class="col-twelve">
 
+        <h5 style="font-size: 2.4rem; color: #000; padding: 0px 0px 3px; text-transform: capitalize;">hobbies</h5>
+        <h1 style="font-family: sofia;    color: #ffffff;" >What Can I Do For You & Your Organisation?</h1>
+
+        <!-- <p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p> -->
+
+      </div>      
+    </div> <!-- /section-intro -->
 		<div class="row">
 			<div class="col-twelve">
 
@@ -1149,9 +1253,7 @@ height: 60px;"></a>
 							<i class="icon-pencil-ruler"></i>
 						</div>
 
-						<h3 class="stat-title">
-							Playing cricket
-						</h3>
+				
 
 						<h5 class="stat-title">
 							Playing cricket
@@ -1164,10 +1266,16 @@ height: 60px;"></a>
 						<div class="icon-part">
 							<i class="icon-users"></i>
 						</div>
+            <style>   
+              .stat-title{
+                       color: #FFFFFF !important;
+    font-size: 1.5rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0;
+    font-family: "poppins-medium", sans-serif;
+              }
+            </style>
 
-						<h3 class="stat-count">
-							Watching Movies
-						</h3>
 
 						<h5 class="stat-title">
 							Watching Movies
@@ -1180,11 +1288,6 @@ height: 60px;"></a>
 						<div class="icon-part">
 							<i class="icon-badge"></i>
 						</div>
-
-						<h3 class="stat-count">
-							Palying Badminton
-						</h3>
-
 						<h5 class="stat-title">
 							Palying Badminton
 						</h5>
@@ -1197,9 +1300,6 @@ height: 60px;"></a>
 							<i class="icon-light-bulb"></i>
 						</div>
 
-						<h3 class="stat-count">
-							Playing Video Games
-						</h3>
 
 						<h5 class="stat-title">
 							Playing Video Games
@@ -1213,9 +1313,6 @@ height: 60px;"></a>
 							<i class="icon-cup"></i>
 						</div>
 
-						<h3 class="stat-count">
-							Internet Surfing
-						</h3>
 
 						<h5 class="stat-title">
 							Internet Surfing
@@ -1229,9 +1326,6 @@ height: 60px;"></a>
 							<i class="icon-clock"></i>
 						</div>
 
-						<h3 class="stat-count">
-							Exploring Places / Travelling
-						</h3>
 
 						<h5 class="stat-title">
 							Exploring Places / Travelling
@@ -1249,13 +1343,13 @@ height: 60px;"></a>
 	
    <!-- contact
    ================================================== -->
-	<section id="contact">
+	<section id="contact" style="padding: 35px 0px 3px; font-size: 2.5rem">
 
 		<div class="row section-intro">
    		<div class="col-twelve">
 
-   			<h5>Contact</h5>
-   			<h1 style="font-family: sofia">I'd Love To Hear From You.</h1>
+   			<h5 style="text-transform: capitalize;">Contact</h5>
+   			<h1 style="font-family: sofia">I'd  Love To Hear From You.</h1>
 
    			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
 
@@ -1364,10 +1458,11 @@ height: 60px;"></a>
    <!-- footer
    ================================================== -->
 
-   <footer>
+   <footer style=" font-size: 1.4rem;     line-height: 1.4rem;    padding: 30px;
+    text-align: center;    background-color: #151515;    box-shadow: -1px 0px 10px 1px rgba(0,0,0,.5);">
      	<div class="row">
 
-     		<div class="col-six tab-full pull-right social">
+     	<!-- 	<div class="col-six tab-full pull-right social">
 
      			<ul class="footer-social">        
 			      <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
@@ -1378,7 +1473,7 @@ height: 60px;"></a>
 
 			   </ul> 
 	      		
-	      </div>
+	      </div> -->
 
       	<div class="col-six tab-full">
 	      	<div class="copyright">
@@ -1403,6 +1498,14 @@ height: 60px;"></a>
    <script src="js/jquery-2.1.3.min.js"></script>
    <script src="js/plugins.js"></script>
    <script src="js/main.js"></script>
+   <script>
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+        loop:true,
+        autoplay:true,
+        autoplayTimeout:1000
+    });
+   </script>
 
 </body>
 
