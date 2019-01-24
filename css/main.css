@@ -1700,13 +1700,13 @@ header .logo a {
 }
 #resume .timeline-content h4::after {
 	content: "";
-	display: block;
-	height: 3px;
-	width: 50px;
-	background: rgba(0, 0, 0, 0.2);
-	position: absolute;
-	left: 0;
-	bottom: 0;
+    display: block;
+    height: 3px;
+    width: 72px;
+    background: rgb(14, 80, 35);
+    position: absolute;
+    left: 0;
+    bottom: 16px;
 }
 
 /**
