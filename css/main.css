@@ -71,8 +71,8 @@ html, body {
 }
 body {
 	background: #151515;
-	font-family: "lora-regular", serif;
-	font-size: 1.7rem;
+	font-family: Muli,century gothic, roboto slab, serif;
+	font-size: 1.459rem;
 	line-height: 3rem;
 	color: #6e6e6e;
 }
