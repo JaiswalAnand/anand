@@ -1696,7 +1696,7 @@ header .logo a {
 }
 #resume .timeline-content h4 {
 	position: relative;
-	padding-bottom: 1.8rem;
+	padding-bottom: 0px;
 }
 #resume .timeline-content h4::after {
 	content: "";
@@ -1706,7 +1706,7 @@ header .logo a {
     background: rgb(14, 80, 35);
     position: absolute;
     left: 0;
-    bottom: 16px;
+    bottom: 0px;
 }
 
 /**
