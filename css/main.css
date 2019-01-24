@@ -153,8 +153,8 @@ p img {
 	margin: 0;
 }
 p.lead {
-	font-family: "lora-regular", serif;
-	font-size: 2rem;
+	font-family: Muli,century gothic, roboto slab, serif;
+	font-size: 1.789rem;
 	line-height: 1.8;
 	color: #888888;
 }
