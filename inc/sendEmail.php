@@ -42,16 +42,7 @@ if($_POST) {
 	$headers .= "Reply-To: ". $email . "\r\n";
  	$headers .= "MIME-Version: 1.0\r\n";
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-// Deepak Email code
-$to      = 'deepak@msysbsol.com';
-$subject = 'the subject';
-$message = 'hello';
-$headers = 'From: deepak@msysbsol.com' . "\r\n" .
-    'Reply-To: deepak@msysbsol.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
 
-mail($to, $subject, $message, $headers);
-// Deepak Email code End
 
    if (!$error) {
 
