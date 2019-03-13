@@ -1503,14 +1503,14 @@ height: 60px; margin-bottom: -10px;"></a>
 var is_menu_opened = true;
 function openNav() {
 $('.header-nav-wrap').slideToggle('slow', function() {
-      is_menu_opened = true;
+      is_menu_opened = false;
     });
 }
  $(function(){
   $(document).click(function(e){  
     if(is_menu_opened){
       $('.header-nav-wrap').slideToggle('slow', function() {
-      is_menu_opened = false;
+      is_menu_opened = true;
     }); 
     }
   });
