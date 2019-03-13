@@ -440,7 +440,7 @@
 height: 60px; margin-bottom: -10px;"></a>
         </div>
 
-        <nav id="main-nav-wrap" class="header-nav-wrap">
+        <nav id="main-nav-wrap" class="header-nav-wrap" onclick="openNav()">
             <ul class="header-nav">
                 <li class="current"><a class="smoothscroll" href="#intro" title="home">Home</a></li>
                 <li ><a class="smoothscroll" href="#about" title="about">About Me</a></li>
@@ -1499,7 +1499,23 @@ height: 60px; margin-bottom: -10px;"></a>
         autoplayTimeout:1000
     });
    </script>
-
+<script>
+var is_menu_opened = false;
+function openNav() {
+$('.header-nav-wrap').slideToggle('slow', function() {
+      is_menu_opened = true;
+    });
+}
+ $(function(){
+  $(document).click(function(e){  
+    if(is_menu_opened){
+      $('.header-nav-wrap').slideToggle('slow', function() {
+      is_menu_opened = false;
+    }); 
+    }
+  });
+});
+</script>
 </body>
 
 </html>
